@@ -1,0 +1,19 @@
+/* Navbar.css */
+.navbar {
+    background-color: #f44336;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 50;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .navbar a {
+    color: white;
+    text-decoration: none;
+  }
+  
+  .navbar a:hover {
+    color: #e57373; /* Rojo más claro */
+  }
+  

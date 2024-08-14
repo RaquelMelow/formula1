@@ -1,17 +1,13 @@
 import FeaturedRaces from "../components/FeaturedRaces"
-import Footer from "../components/Footer"
 import Hero from "../components/Hero"
-import Navbar from "../components/Navbar"
 
 const HomePage = () => {
     return (
         <>
-        <Navbar/>
-        <main>
+        <main className="pt-16">
             <Hero/>
             <FeaturedRaces/>
         </main>
-        <Footer/>
         </>
     )
 }
