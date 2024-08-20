@@ -17,7 +17,23 @@ export const createRace = async (req, res) => {
 };
 
 
+export const getAllRaces = async (req, res) => {
+    try {
+        const races = await Race.find();
+        res.status(200).json(races);
+    } catch (error) {
+        res.status(400).json({ error: error.message });
+    }
+};
 
+export const getRacesId = async (req, res) => {
+    try {
+        const races = await Race.find();
+        res.status(200).json(races);
+    } catch (error) {
+        res.status(400).json({ error: error.message });
+    }
+};
 
 export const publishRace = async (req, res) => {
     try {

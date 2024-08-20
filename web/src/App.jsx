@@ -1,5 +1,6 @@
-import Footer from '../components/Footer';
-import Navbar from '../components/Navbar';
+import Footer from '../components/Footer/Footer';
+import Navbar from '../components/Navbar/Navbar';
+import AppRoutes from '../routes/AppRoutes';
 
 function App() {
     return (
@@ -10,6 +11,7 @@ function App() {
                     <div className="container mx-auto px-4 py-8">
                         <h1>Bienvenido a F1 Fantasy</h1>
                         <p>Contenido principal de la página...</p>
+                        <AppRoutes />
                     </div>
                 </main>
             </div>

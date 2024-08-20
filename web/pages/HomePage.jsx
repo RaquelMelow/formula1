@@ -1,12 +1,13 @@
-import FeaturedRaces from "../components/FeaturedRaces"
-import Hero from "../components/Hero"
+import GameCardHome from "../components/FantasyHome/GameCardHome";
+import FeaturedRaces from "../components/Races/FeaturedRaces";
+
 
 const HomePage = () => {
     return (
         <>
         <main className="pt-16">
-            <Hero/>
-            <FeaturedRaces/>
+            <GameCardHome />
+            <FeaturedRaces />
         </main>
         </>
     )

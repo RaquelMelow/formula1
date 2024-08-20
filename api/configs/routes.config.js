@@ -4,7 +4,7 @@ import { createPilot, getAllPilots, getPilotById, updatePilotById, deletePilotBy
 import { createTeam, getAllTeams, getTeamById, updateTeamById, deleteTeamById } from '../controllers/teamsController.js';
 import { createCircuit, getAllCircuits, getCircuitById, updateCircuitById, deleteCircuitById } from '../controllers/circuitController.js';
 import { createGameTeam, getUserGameTeams, updateGameTeam, deleteGameTeam } from '../controllers/gameTeamController.js';
-import { createRace, addRaceResults, calculatePoints, publishRace } from '../controllers/raceController.js';
+import { createRace, addRaceResults, calculatePoints, publishRace, getAllRaces, getRacesId } from '../controllers/raceController.js';
 
 
 const router = express.Router();
@@ -45,6 +45,8 @@ router.delete('/gameteams/:gameTeamId', deleteGameTeam);
 
 //races
 router.post('/races', createRace);
+router.get('/races', getAllRaces);
+router.get('/races/:raceId', getRacesId);
 router.put('/races/:raceId/publish', publishRace);
 router.put('/races/:raceId/results', addRaceResults);
 router.post('/races/:raceId/calculatePoints', calculatePoints);

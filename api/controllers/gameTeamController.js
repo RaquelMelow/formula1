@@ -50,7 +50,7 @@ export const createGameTeam = async (req, res) => {
 
         res.status(201).json(gameTeam);
     } catch (error) {
-        console.error('Error en createGameTeam:', error); // Imprimir error en consola
+        console.error('Error en createGameTeam:', error); 
         res.status(400).json({ error: error.message });
     }
 };
