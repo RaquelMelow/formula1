@@ -11,12 +11,12 @@ const api = axios.create({
 });
 
 // Obtener todos los usuarios
-export const getUsers = async () => {
+export const getUser = async (userId) => {
   try {
-    const response = await api.get('/users');
-    return response.data;
+      const response = await api.get(`/users/${userId}`);
+      return response.data;
   } catch (error) {
-    throw new Error('Error fetching users');
+      throw new Error('Error fetching user');
   }
 };
 
@@ -58,6 +58,17 @@ export const getRaces = async () => {
         throw new Error('Error fetching races');
     }
 };
+
+export const getAllPilots = async () => {
+  try {
+    const response = await api.get('/pilots');
+    return response.data;
+  } catch (error) {
+    throw new Error('Error fetching pilots');
+  }
+};
+
+
 
 // Función para crear un equipo de juego
 export const createGameTeam = async (teamData) => {
