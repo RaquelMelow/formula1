@@ -1,6 +1,6 @@
 import express from 'express';
 import { getUsers, createUser, updateUser, deleteUser } from '../controllers/userController.js';
-import { createPilot, getAllPilots, getPilotById, updatePilotById, deletePilotById } from '../controllers/pilotsController.js';
+import { createPilots, getAllPilots, getPilotById, updatePilotById, deletePilotById } from '../controllers/pilotsController.js';
 import { createTeam, getAllTeams, getTeamById, updateTeamById, deleteTeamById } from '../controllers/teamsController.js';
 import { createCircuit, getAllCircuits, getCircuitById, updateCircuitById, deleteCircuitById } from '../controllers/circuitController.js';
 import { createGameTeam, getUserGameTeams, updateGameTeam, deleteGameTeam } from '../controllers/gameTeamController.js';
@@ -16,7 +16,7 @@ router.put('/users/:id', updateUser);
 router.delete('/users/:id', deleteUser); 
 
 //pilots
-router.post('/pilots', createPilot); 
+router.post('/pilots', createPilots); 
 router.get('/pilots', getAllPilots);
 router.get('/pilots/:id', getPilotById); 
 router.put('/pilots/:id', updatePilotById);

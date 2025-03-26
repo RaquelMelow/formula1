@@ -2,14 +2,15 @@ export const teams = [
     'Red Bull Racing',
     'Ferrari',
     'Mercedes',
-    'Alpine',
     'McLaren',
     'Aston Martin',
-    'Alfa Romeo',
+    'Alpine',
     'Haas',
-    'AlphaTauri',
-    'Williams'
+    'Williams',
+    'Kick Sauber',
+    'Racing Bulls'
 ];
+
 export const countries = [
     'Alemania', 'Argentina', 'Australia', 'Austria', 'Bélgica', 
     'Brasil', 'Canadá', 'Chile', 'China', 'Colombia', 

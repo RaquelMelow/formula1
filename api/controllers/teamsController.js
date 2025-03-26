@@ -1,13 +1,19 @@
 import Team from '../models/teamModel.js';
 
-export const createTeam = async (req, res) => {
+export const createTeam = async ({ name }) => {
     try {
-        const { name } = req.body;
-        const team = new Team({ name });
-        await team.save();
-        res.status(201).json(team);
+    const existingTeam = await Team.findOne({ name });
+    if (existingTeam) {
+        console.log(`El equipo "${name}" ya existe, no se duplicará.`);
+        return;
+    }
+
+    const team = new Team({ name });
+    await team.save();
+    console.log(`Equipo "${name}" creado correctamente.`);
     } catch (error) {
-        res.status(400).json({ error: error.message });
+    console.error(`Error al crear el equipo "${name}":`, error.message);
+    throw error;
     }
 };
 

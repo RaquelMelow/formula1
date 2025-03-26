@@ -1,6 +1,5 @@
 import mongoose from 'mongoose';
 const { Schema } = mongoose;
-import { countries } from '../constants/pilotsConstants.js';
 
 const pilotSchema = new Schema({
     name: {
@@ -10,11 +9,6 @@ const pilotSchema = new Schema({
     team: {
         type: Schema.Types.ObjectId,
         ref: 'Team',
-        required: true
-    },
-    country: {
-        type: String,
-        enum: countries,
         required: true
     }
 });
