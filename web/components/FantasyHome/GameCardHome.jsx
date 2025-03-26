@@ -20,11 +20,12 @@ const GameCardHome = () => {
           />
         </div>
 
-        <div className="col-span-2 flex flex-col justify-between">
+        <div className="game-card-home-desc col-span-2 flex flex-col justify-between">
           <div>
             <h2 className="game-card-home-title">F1 Fantasy Game</h2>
             <p className="game-card-home-description">
-              Crea tu equipo de ensueño y compite contra otros jugadores.
+            Forma tu escudería ideal eligiendo pilotos y equipos de la Fórmula 1, compite contra jugadores de todo el mundo y demuestra tus conocimientos estratégicos en cada carrera.
+            <br />¡Haz las mejores selecciones y lidera la clasificación!
             </p>
           </div>
 

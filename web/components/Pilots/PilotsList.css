@@ -1,0 +1,60 @@
+.pilots-container {
+    display: flex;
+    overflow-x: auto;
+    padding: 10px;
+    white-space: nowrap;
+}
+
+.pilot-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 200px; 
+    height: 250px; 
+    margin-right: 10px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    text-align: center;
+    box-sizing: border-box;
+    flex: 0 0 auto; 
+}
+
+.pilot-image-placeholder {
+    width: 100%;
+    height: 200px;
+    background-color: #e0e0e0;
+    margin-bottom: 10px;
+}
+
+.pilot-name {
+    font-size: 1.2rem;
+    margin: 0;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    line-height: 1.2rem;
+    height: 1.5rem; 
+    margin-bottom: 10px;
+}
+
+.pilot-info {
+    font-size: 0.9rem;
+    margin: 5px 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    line-height: 1rem;
+    height: 1rem; 
+}
+
+.pilot-info-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: calc(250px - 110px);
+    margin-top: 10px;
+}
+
+
+

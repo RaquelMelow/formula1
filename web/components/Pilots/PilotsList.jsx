@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { getAllPilots } from '../../services/api.services';
+import './PilotsList.css';
 
 const PilotsList = () => {
     const [pilots, setPilots] = useState([]);
@@ -14,7 +15,7 @@ const PilotsList = () => {
             } catch (error) {
                 setError(error.message);
             } finally {
-                setLoading(false); // Asegúrate de que loading se actualiza
+                setLoading(false);
             }
         };
 
@@ -27,18 +28,31 @@ const PilotsList = () => {
     return (
         <div>
             <h1>Pilots List</h1>
-            <ul>
+            <div className="pilots-container">
                 {pilots.map((pilot) => (
-                    <li key={pilot._id}>
-                        <h2>{pilot.name}</h2>
-                        <p>Team: {pilot.team.name}</p>
-                        <p>Country: {pilot.country}</p>
-                    </li>
+                    <div key={pilot._id} className="pilot-card">
+                        <div className="pilot-image-placeholder">
+                            {/* Aquí puedes agregar la imagen en el futuro */}
+                        </div>
+                        <h2 className="pilot-name">{pilot.name}</h2>
+                        <div className="pilot-info-container">
+                            <p className="pilot-info">Team: {pilot.team.name}</p>
+                            <p className="pilot-info">Country: {pilot.country}</p>
+                        </div>
+                    </div>
                 ))}
-            </ul>
+            </div>
         </div>
     );
 };
 
 export default PilotsList;
+
+
+
+
+
+
+
+
 
